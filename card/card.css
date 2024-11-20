@@ -1,0 +1,116 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #f0f8ff, #a2d9ff);
+    font-family: 'Arial', sans-serif;
+    box-sizing: border-box;
+}
+
+.main {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; 
+    justify-content: center;
+}
+
+.container {
+    height: 455px;
+    width: 300px; 
+    background: white;
+    position: relative;
+    border-radius: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+}
+
+.img {
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background: #e0e0e0;
+}
+
+.img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s ease-in-out;
+    display: block;
+}
+
+.img .placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.2);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+}
+
+.img img[src=""] + .placeholder {
+    visibility: visible;
+}
+
+.text {
+    padding: 20px;
+    color: #333;
+    text-align: left;
+}
+
+.text h2 {
+    font-size: 20px;
+    color: #007acc;
+    margin-bottom: 10px;
+}
+
+.text p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.text button {
+    padding: 10px 20px;
+    background: #007acc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s ease-in-out;
+}
+
+.text button:hover {
+    background: #005fa3;
+    transform: scale(1.05);
+}

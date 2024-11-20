@@ -1,0 +1,99 @@
+
+
+/* Ensure the body takes up the full height of the viewport */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+/* Container styling */
+.container {
+    height: 400px; /* Fixed height */
+    width: 300px; /* Fixed width */
+    background-color: rgb(130, 76, 139);
+    display: flex;
+    flex-direction: column; /* Stack the login header and form vertically */
+    justify-content: flex-start; /* Align items to the top */
+    padding: 20px; /* Add padding around the content */
+    opacity: 90%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 60px rgb(5, 216, 198);
+}
+
+/* Styling for the login text */
+.login {
+    font-weight: bold; /* Make it bold */
+    font-size: 18px; /* Adjust font size */
+    margin-bottom: 20px; /* Space below the header */
+    text-align: center; /* Center the text horizontally */
+    color: rgb(0, 251, 255);
+    text-shadow: 5px 5px 5px rgba(97, 251, 2, 0.728);
+    font-style: italic;
+    
+
+}
+
+/* Styling for the form */
+.name {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+    text-align: center; 
+    gap:10px;
+    color: rgb(64, 249, 23);
+    text-shadow: 5px 5px 5px rgb(254, 62, 4);
+   
+}
+
+
+.submit{
+    display: flex;
+    margin-top: 20px;
+    background-color: blue;
+    width: 60px;
+    color: rgb(10, 165, 176);
+    text-shadow: 50px 50px 50px rgb(26, 234, 193);
+/* Style for the input fields */
+}
+input[type="text"] {
+    background-color: #f0f0f0;
+    color: #333;
+    border: 3px solid #FF5733; /* Red border for password */
+
+}
+
+/* Change the input box color when it's focused (clicked on) */
+input[type="text"]:focus {
+    background-color: #ffffff; /* White background when focused */
+    border-color: #28a745; /* Green border on focus */
+    outline: none; /* Remove the default outline on focus */
+    
+}
+
+/* Style for the password input */
+input[type="password"] {
+    background-color: #f0f0f0;
+    color: #333;
+    border: 4px solid #FF5733; /* Red border for password */
+}
+input[type="password"]:focus{
+    background-color: #ffffff; /* White background when focused */
+    border-color: #1dcfd8; /* Green border on focus */
+    outline: none; /* Remove the default outline on focus */
+}
+
+/* Style for the email input */
+input[type="email"] {
+    background-color: #f0f0f0;
+    color: #333;
+    border: 4px solid #FFC300; /* Yellow border for email */
+}
+input[type="email"]:focus{
+    background-color: #ffffff; /* White background when focused */
+    border-color: #681dd8; /* Green border on focus */
+    outline: none; /* Remove the default outline on focus */
+}

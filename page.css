@@ -1,0 +1,149 @@
+
+div.maincontainer {
+
+}
+
+div.container{
+   margin: 50% 50%;
+   transform: translate(-50% , -50%);
+    background-color: rgba(199, 107, 107, 0.633);
+    height: 700px;
+    width: 450px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center; 
+        
+    background-image: url('https://wallpaperaccess.com/full/16504.jpg'); /* Path to the image */
+    background-size: cover; /* Ensures the image covers the entire page */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    border-bottom-color: blue;
+    
+}
+div.one{
+    margin: 50% 50%;
+    transform: translate(-50% , -50%);
+    flex-direction: column;
+    height: 300px;
+    font-size: 30px;
+}
+input[type="email"],
+input[type="password"] {
+    width: 300PX; 
+    height: 40px; 
+    font-size: 25px; 
+    padding: 8px;
+    border-radius: 10px;
+    background: transparent;
+  
+    border-top: none;
+    border-left: none;
+    border-right: none;
+ outline: none;
+}
+input[type="email"]{
+    margin-top: 8px;
+}
+input[type="password"]{
+    margin-top: 8px;
+}
+div.password1{
+    margin-top: 20px;
+}
+input[type="email"]:hover,
+input[type="password"]:hover{ 
+    border-block-color: rgb(160, 3, 222);
+    box-shadow: 3px 5px 15px rgb(218, 210, 6);
+}
+button.login-button,button.Sign-up {
+    width: auto; 
+    height: auto;
+    background-color: aqua;
+    opacity: 1; 
+    font-size: larger;
+    border-radius: 10px;
+    border: none; 
+    cursor: pointer;
+        margin-top: 50px; 
+        background: transparent;
+    }
+label[for="np"] ,label[for="nm"] ,button.login-button ,button.Sign-up{
+    position: relative; /* Necessary for positioning the pseudo-element */
+    display: inline-block; /* Ensures the label is treated like a block for positioning */
+}
+
+label[for="np"]:hover ,
+label[for="nm"]:hover ,
+button.login-button:hover,
+button.Sign-up:hover
+{
+    font-weight: bold;
+    color: rgb(124, 255, 94);
+}
+
+/* Create the line below the label */
+label[for="np"]::after,
+label[for="nm"]::after,
+button.login-button::after,
+button.Sign-up::after
+ {
+    content: ""; /* Empty content for the pseudo-element */
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Position it just below the label */
+    width: 0; /* Initial width (before hover) */
+    height: 5px; /* Line height */
+    background-color: rgb(23, 205, 255); /* Line color */
+    transition: width 0.3s ease-in-out; /* Smooth transition for the width */
+   } 
+label[for="np"]:hover::after,
+button.login-button:hover::after,
+button.Sign-up:hover::after,
+label[for="nm"]:hover::after {
+    width: 65%; 
+}
+button.Sign-up{
+    margin-left: 90px;
+    font-size: 25px;
+    font-weight: bolder;
+}
+.head {
+
+    height: auto;
+    width: 100px;
+    display: inline-block; /* Ensure the h1 behaves like a block element for positioning */
+    position: relative; /* Necessary for the positioning of the ::after pseudo-element */
+    font-size: 60px; /* Adjust the font size as per your design */
+    color: rgb(32, 23, 10); /* Initial text color */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Hover effect for the h1 */
+.head:hover {
+    font-weight: bold;
+    color: rgb(0, 0, 0); /* Change text color on hover if needed */
+}
+
+/* Create the underline effect */
+.head::after {
+    content: ""; /* Empty content for the pseudo-element */
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Position the line just below the text */
+    width: 0; /* Initial width (before hover) */
+    height: 5px; /* Line height */
+    background-color: rgb(23, 205, 255); /* Line color */
+    transition: width 0.3s ease-in-out; /* Smooth transition for width */
+}
+
+/* Expand the underline on hover */
+.head:hover::after {
+    width: 100%; /* Make the underline span the full width of the h1 */
+}
+
+
+
+
+
+

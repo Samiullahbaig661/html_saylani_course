@@ -1,0 +1,28 @@
+body{
+margin: 0%;
+padding: 0%;
+}
+div.main{
+    display: flex;
+    justify-content: center;
+
+    background-color:#f29d13;   
+    padding: 6px; 
+    border-radius: 15px;
+    gap: 0px;
+}
+li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 15px;
+    font-weight: bolder;
+    padding: 13px; 
+    border-radius: 5px;
+    font-family: sans-serif;
+}
+li:hover{
+    color: #f29d13 ;
+    background-color: #1A1B1D ;
+ transition: 0.22s ease-in;
+}
