@@ -41,7 +41,6 @@ input[type="password"] {
     outline: none;          
     transition: all 0.3s ease-in-out; 
 }
-
 div.btn{
     display: flex;
     width: 350px;
@@ -49,7 +48,6 @@ div.btn{
     padding: 5px;
     margin-top: 5px;
 }    
-
 .ff,.gg{
 background-color: #936fc6;
 height: 50px;

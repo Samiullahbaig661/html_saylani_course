@@ -1,0 +1,576 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const navLinks = document.querySelectorAll('nav a');
+  
+      navLinks.forEach(link => {
+          link.addEventListener('click', function (e) {
+              e.preventDefault();
+  
+              const targetId = this.getAttribute('href').substring(1);
+              const targetSection = document.getElementById(targetId);
+  
+              window.scrollTo({
+                  top: targetSection.offsetTop+80,
+                  behavior: 'smooth'
+              }); 
+          });
+      });
+  });
+  </script>
+
+
+
+
+ 
+</head>
+<body>
+
+
+
+
+
+
+
+
+    <div class="px-4 mx-auto max-w-7xl sm:px-6">
+        <div class="relative pt-6 pb-16 sm:pb-24">
+            <nav class="relative flex items-center justify-between sm:h-10 md:justify-center" aria-label="Global">
+                <div class="flex items-center flex-1 md:absolute md:inset-y-0 md:left-0">
+                    <div class="flex items-center justify-between w-full md:w-auto">
+                        <a href="#"><span class="sr-only">Company Name</span>
+                            <img class="w-auto h-8 sm:h-10" src="https://gfsbuilders.com.pk/wp-content/uploads/2023/09/GFSlogo.png" loading="lazy" width="202" height="40">
+                        </a>
+                        <div class="flex items-center -mr-2 md:hidden">
+                            <button class="inline-flex items-center justify-center p-2 text-gray-400 bg-gray-50 rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-50"  type="button" aria-expanded="false">
+                                <span class="sr-only">Open main menu</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden md:flex md:space-x-10 list-none">
+                    <li>
+                        <a href="#home" class="text-base font-normal text-gray-500 list-none hover:text-gray-900"
+                            target="">HOME</a>
+                    </li>
+                    <li>
+                        <a href="#INTRO" class="text-base font-normal text-gray-500 list-none hover:text-gray-900"
+                            target="">INTRODUCTION
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#service" class="text-base font-normal text-gray-500 list-none hover:text-gray-900"
+                            target="">SERVICES
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#aboutus" class="text-base font-normal text-gray-500 list-none hover:text-gray-900"
+                            target="">ABOUTUS
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#project" class="text-base font-normal text-gray-500 list-none hover:text-gray-900"
+                            target="">PROJECTS
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="#gallary" class="text-base font-normal text-gray-500 list-none hover:text-gray-900"
+                            target="">GALLERY
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="text-base font-normal text-gray-500 list-none hover:text-gray-900"
+                            target="_blank">CONTACT US
+                        </a>
+                    </li>
+                </div>
+                <div class="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0">
+                    <div class="inline-flex rounded-full shadow">
+                        <div href="#"
+                            class="inline-flex items-center px-4 py-2 text-base text-gray-900 bg-white border border-transparent rounded-full cursor-pointer font-base hover:bg-gray-50 ">
+                        
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+      
+
+
+
+
+
+    <div class="relative bg-gradient-to-r from-purple-600 to-blue-600 h-screen text-white overflow-hidden" id="home" >
+        <div class="absolute inset-0">
+          <img src="https://media-exp1.licdn.com/dms/image/C4D1BAQGMcapwi9vMXg/company-background_10000/0/1636367776091?e=2147483647&v=beta&t=zQ1n4u_beT__HuDxgwsQ7yQ8ecWCjB0SxRQtKJRe6OQ" alt="Background Image" class="object-cover object-center w-full h-full" />
+          <div class="absolute inset-0 bg-black opacity-50"></div>
+        </div>
+        
+        <div class="relative z-10 flex flex-col justify-center items-center h-full text-center">
+          <h1 class="text-5xl font-bold leading-tight mb-4">Welcome to Our Awesome Website</h1>
+          <p class="text-lg text-gray-300 mb-8">Discover amazing features and services that await you.</p>
+          <a href="#" class="bg-yellow-400 text-gray-900 hover:bg-yellow-300 py-2 px-6 rounded-full text-lg font-semibold transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">Get Started</a>
+        </div>
+      </div>
+      
+      
+
+
+
+    <br><br><br>
+
+
+
+
+
+
+    <div class="flex flex-wrap" id="INTRO">
+        <div class="w-full sm:w-8/12 mb-10">
+          <div class="container mx-auto h-full sm:p-10">
+            <nav class="flex px-4 justify-between items-center">
+              <div class="text-4xl font-bold">
+                <span class="text-green-700">.</span>
+              </div>
+              <div>
+                <img src="https://image.flaticon.com/icons/svg/497/497348.svg" alt="" class="w-8">
+              </div>
+            </nav>
+            <header class="container px-4 lg:flex mt-10 items-center h-full lg:mt-0">
+              <div class="w-full">
+                <h1 class="text-4xl lg:text-6xl font-bold">COMPANY <span class="text-red-700">INTRODUCTION</span> </h1>
+                <div class="w-20 h-2 bg-green-700 my-4"></div>
+                <p class="text-xl mb-10">GFS Builders and Developers are among the leading and diversified builders, well-known for their projects across various cities in Pakistan. They demonstrate a commitment to endless success through effective business management strategies. Under the dedicated leadership of Chief Executive Officer Mr. Irfan Wahid, who has over six years of executive-level experience in the United Kingdom and the United States, the company continually improves and delivers outstanding performance in the real estate market.
+
+                    Mr. Irfan Wahid is recognized for his principles and integrity, inspiring innovation in Pakistan’s real estate market, making it more accessible and convenient for all. His leadership qualities led him to be elected as the vice chairman of the Memon Supreme Council and as a trusted member of the Association of Builders and Developers (ABAD). With an MBA from the University of Washington and real estate courses from the London School of Economics (LSE)
+                    
+                    he showcases innovative residential development through design, craftsmanship, and responsiveness to customer needs</p>
+                <button class="bg-red-500 text-white text-2xl font-medium px-4 py-2 rounded shadow">Learn More</button>
+              </div>
+            </header>
+          </div>
+        </div>
+        <img src="https://gfsbuilders.com.pk/wp-content/uploads/2024/04/Message-From-Our-CEO-686x1024.png" alt="Leafs" class="w-full h-48 object-cover sm:h-screen sm:w-4/12">
+      </div>
+
+
+
+
+
+
+      <CEnter>
+        <h1  class="text-4xl tracking-tight font-bold text--800 sm:text-3xl md:text-2xl ">our projects</h1>
+        <h1 class="text-4xl tracking-tight font-extrabold text--800 sm:text-5xl md:text-6xl">
+        <span class="block  text-red-600 xl:inline">PROJECT</span> <span class="block xl:inline">GALLERY</span>
+        <span class="block text-red-600 xl:inline">.</span>
+    </h1>
+    </CEnter>
+
+
+
+
+    <div class="bg-white dark:bg-gray-800 h-screen h-full py-6 sm:py-8 lg:py-12" id="gallary">
+      <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
+          <div class="mb-4 flex items-center justify-between gap-8 sm:mb-8 md:mb-12">
+              <div class="flex items-center gap-12">
+                  <h2 class="text-2xl font-bold text-gray-800 lg:text-3xl dark:text-white"></h2>
+  
+                  <p class="hidden max-w-screen-sm text-gray-500 dark:text-gray-300 md:block">
+                     
+                  </p>
+              </div>
+  
+              <a href="#"
+                  class="inline-block rounded-lg border bg-white dark:bg-gray-700 dark:border-none px-4 py-2 text-center text-sm font-semibold text-gray-500 dark:text-gray-200 outline-none ring-indigo-300 transition duration-100 hover:bg-gray-100 focus-visible:ring active:bg-gray-200 md:px-8 md:py-3 md:text-base">
+                  More
+              </a>
+          </div>
+  
+          <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-6 xl:gap-8">
+              <!-- image - start -->
+              <a href="#"
+                  class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80">
+                  <img src=" https://gfsbuilders.com.pk/wp-content/uploads/2023/09/ntr-4.webp" loading="lazy" alt="Photo by Minh Pham" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
+  
+                  <div
+                      class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
+                  </div>
+  
+                  <span class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">VR</span>
+              </a>
+              <!-- image - end -->
+  
+              <!-- image - start -->
+              <a href="#"
+                  class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80">
+                  <img src="https://gfsbuilders.com.pk/wp-content/uploads/2023/09/ntr-3.webp" loading="lazy" alt="Photo by Magicle" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
+  
+                  <div
+                      class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
+                  </div>
+  
+                  <span class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg"></span>
+              </a>
+              <!-- image - end -->
+  
+              <!-- image - start -->
+              <a href="#"
+                  class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80">
+                  <img src="https://i.ytimg.com/vi/KUlnuPmu49A/maxresdefault.jpg" loading="lazy" alt="Photo by Martin Sanchez" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
+  
+                  <div
+                      class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
+                  </div>
+  
+                  <span class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg"></span>
+              </a>
+              <!-- image - end -->
+  
+              <!-- image - start -->
+              <a href="#"
+                  class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80">
+                  <img src="https://tse2.mm.bing.net/th?id=OIP.jx1j5cWs0Y-leJKrRKI00gHaD4&pid=Api&P=0&h=220" loading="lazy" alt="Photo by Lorenzo Herrera" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
+  
+                  <div
+                      class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
+                  </div>
+  
+                  <span class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">Retro</span>
+              </a>
+              <!-- image - end -->
+          </div>
+      </div>
+  </div>
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br>
+<CEnter>
+    <h1  class="text-4xl tracking-tight font-bold text--800 sm:text-3xl md:text-2xl ">OUR BEST PROJECT</h1>
+    <h1 class="text-4xl tracking-tight font-extrabold text--800 sm:text-5xl md:text-6xl">
+    <span class="block xl:inline"></span> <span class="block text-red-600 xl:inline">FEATURES PROJECTS</span>
+    <span class="block text-red-600 xl:inline">.</span>
+</h1>
+</CEnter>
+<br><br><br>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10" id="project">
+  
+    <!-- CARD 1 -->
+    <div class="rounded overflow-hidden shadow-lg flex flex-col">
+        <a href="#"></a>
+        <div class="relative"><a href="#">
+                <img class="w-full"
+                    src="https://gfsbuilders.com.pk/wp-content/uploads/2023/09/ntr.webp"
+                    alt="Sunset in the mountains">
+                <div
+                    class="hover:bg-transparent transition duration-300 absolute bottom-0 top-0 right-0 left-0 bg-gray-900 opacity-25">
+                </div>
+            </a>
+            <a href="#!">
+                <div
+                    class="text-xs absolute top-0 right-0 bg-indigo-600 px-4 py-2 text-white mt-3 mr-3 hover:bg-white hover:text-indigo-600 transition duration-500 ease-in-out">
+                    
+                </div>
+            </a>
+        </div>
+        <div class="px-6 py-4 mb-auto">
+            <a href="#"
+                class="font-medium text-lg inline-block hover:text-indigo-600 transition duration-500 ease-in-out inline-block mb-2">
+              </a>
+            <p class="text-gray-500 text-sm">
+            </p>
+        </div>
+        <div class="px-6 py-3 flex flex-row items-center justify-between bg-gray-100">
+            <span href="#" class="py-1 text-xs font-regular text-gray-900 mr-1 flex flex-row items-center">
+                <svg height="13px" width="13px" version="1.1" id="Layer_1"
+                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                    y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;"
+                    xml:space="preserve">
+                    <g>
+                        <g>
+                            <path
+                                d="M256,0C114.837,0,0,114.837,0,256s114.837,256,256,256s256-114.837,256-256S397.163,0,256,0z M277.333,256 c0,11.797-9.536,21.333-21.333,21.333h-85.333c-11.797,0-21.333-9.536-21.333-21.333s9.536-21.333,21.333-21.333h64v-128 c0-11.797,9.536-21.333,21.333-21.333s21.333,9.536,21.333,21.333V256z">
+                            </path>
+                        </g>
+                    </g>
+                </svg>
+                <span class="ml-1"></span>
+            </span>
+
+            <span href="#" class="py-1 text-xs font-regular text-gray-900 mr-1 flex flex-row items-center">
+                <svg class="h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z">
+                    </path>
+                </svg>
+                <span class="ml-1"></span>
+            </span>
+        </div>
+    </div>
+
+
+
+    <!-- CARD 2 -->
+    <div class="rounded overflow-hidden shadow-lg flex flex-col">
+        <a href="#"></a>
+        <div class="relative"><a href="#">
+                <img class="w-full"
+                    src="https://gfsbuilders.com.pk/wp-content/uploads/2023/09/7-wonder-city-1.webp"
+                    alt="Sunset in the mountains">
+                <div
+                    class="hover:bg-transparent transition duration-300 absolute bottom-0 top-0 right-0 left-0 bg-gray-900 opacity-25">
+                </div>
+            </a><a href="#!">
+                <div
+                    class="text-xs absolute top-0 right-0 bg-indigo-600 px-4 py-2 text-white mt-3 mr-3 hover:bg-white hover:text-indigo-600 transition duration-500 ease-in-out">
+                </div>
+            </a>
+        </div>
+        <div class="px-6 py-4 mb-auto">
+            <a href="#"
+                class="font-medium text-lg inline-block hover:text-indigo-600 transition duration-500 ease-in-out inline-block mb-2">
+                </a>
+            <p class="text-gray-500 text-sm">
+            </p>
+        </div>
+        <div class="px-6 py-3 flex flex-row items-center justify-between bg-gray-100">
+            <span href="#" class="py-1 text-xs font-regular text-gray-900 mr-1 flex flex-row items-center">
+                <svg height="13px" width="13px" version="1.1" id="Layer_1"
+                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                    y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;"
+                    xml:space="preserve">
+                    <g>
+                        <g>
+                            <path
+                                d="M256,0C114.837,0,0,114.837,0,256s114.837,256,256,256s256-114.837,256-256S397.163,0,256,0z M277.333,256 c0,11.797-9.536,21.333-21.333,21.333h-85.333c-11.797,0-21.333-9.536-21.333-21.333s9.536-21.333,21.333-21.333h64v-128 c0-11.797,9.536-21.333,21.333-21.333s21.333,9.536,21.333,21.333V256z">
+                            </path>
+                        </g>
+                    </g>
+                </svg>
+                <span class="ml-1"></span>
+            </span>
+
+            <span href="#" class="py-1 text-xs font-regular text-gray-900 mr-1 flex flex-row items-center">
+                <svg class="h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z">
+                    </path>
+                </svg>
+                <span class="ml-1"></span>
+            </span>
+        </div>
+    </div>
+
+
+    
+    <!-- CARD 3 -->
+    <div class="rounded overflow-hidden shadow-lg flex flex-col">
+        <a href="#"></a>
+        <div class="relative"><a href="#">
+                <img class="w-full"
+                    src="https://gfsbuilders.com.pk/wp-content/uploads/2023/09/bolan-platinum.webp"
+                    alt="Sunset in the mountains">
+                <div
+                    class="hover:bg-transparent transition duration-300 absolute bottom-0 top-0 right-0 left-0 bg-gray-900 opacity-25">
+                </div>
+            </a><a href="#!">
+                <div
+                    class="text-xs absolute top-0 right-0 bg-indigo-600 px-4 py-2 text-white mt-3 mr-3 hover:bg-white hover:text-indigo-600 transition duration-500 ease-in-out">
+                </div>
+            </a>
+        </div>
+        <div class="px-6 py-4 mb-auto">
+            <a href="#"
+                class="font-medium text-lg inline-block hover:text-indigo-600 transition duration-500 ease-in-out inline-block mb-2">
+                </a>
+            <p  >
+            </p>
+        </div>
+        <div class="px-6 py-3 flex flex-row items-center justify-between bg-gray-100">
+            <span href="#" class="py-1 text-xs font-regular text-gray-900 mr-1 flex flex-row items-center">
+                <svg height="13px" width="13px" version="1.1" id="Layer_1"
+                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                    y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;"
+                    xml:space="preserve">
+                    <g>
+                        <g>
+                            <path
+                                d="M256,0C114.837,0,0,114.837,0,256s114.837,256,256,256s256-114.837,256-256S397.163,0,256,0z M277.333,256 c0,11.797-9.536,21.333-21.333,21.333h-85.333c-11.797,0-21.333-9.536-21.333-21.333s9.536-21.333,21.333-21.333h64v-128 c0-11.797,9.536-21.333,21.333-21.333s21.333,9.536,21.333,21.333V256z">
+                            </path>
+                        </g>
+                    </g>
+                </svg>
+                <span class="ml-1"></span>
+            </span>
+
+            <span href="#" class="py-1 text-xs font-regular text-gray-900 mr-1 flex flex-row items-center">
+                <svg class="h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z">
+                    </path>
+                </svg>
+                <span class="ml-1"></span>
+            </span>
+        </div>
+    </div>
+
+</div>
+
+</div>
+
+
+<br><br><br>
+<CEnter>
+    <h1  class="text-4xl tracking-tight font-bold text--800 sm:text-3xl md:text-2xl text-red-600 ">our team</h1>
+    <h1 class="text-4xl tracking-tight font-extrabold text--800 sm:text-5xl md:text-6xl">
+    <span class="block text-red-600 xl:inline">OUR</span> <span class="block  xl:inline">DIRECTORS</span>
+    <span class="block text-black-600 xl:inline">.</span>
+</h1>
+</CEnter>
+<br><br><br>
+
+
+
+
+      <div class="max-w-2xl mx-auto" id="aboutus">
+
+        <div id="default-carousel" class="relative rounded-lg overflow-hidden shadow-lg" data-carousel="static">
+            <!-- Carousel wrapper -->
+            <div class="relative h-80 md:h-96" data-carousel-inner>
+                <!-- Item 1 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="https://gfsbuilders.com.pk/wp-content/uploads/2023/09/sd.webp"
+                        class="object-cover w-full h-full" alt="Slide 1">
+                    <span class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-xl font-semibold text-white md:text-2xl dark:text-BLACK-800">director IRFAN WAHID</span>
+                </div>
+                <!-- Item 2 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="https://gfsbuilders.com.pk/wp-content/uploads/2023/09/Mohsin-Hi-Res-1024x1024.webp"
+                        class="object-cover w-full h-full" alt="Slide 2">
+                </div>
+                
+                <!-- Item 3 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="https://gfsbuilders.com.pk/wp-content/uploads/2023/09/sdds.webp"
+                        class="object-cover w-full h-full" alt="Slide 3">
+                </div>
+            </div>
+            <!-- Slider indicators -->
+            <div class="flex absolute bottom-5 left-1/2 z-30 -translate-x-1/2 space-x-2" data-carousel-indicators>
+                <button type="button" class="w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 focus:outline-none focus:bg-gray-400 transition"></button>
+                <button type="button" class="w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 focus:outline-none focus:bg-gray-400 transition"></button>
+                <button type="button" class="w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 focus:outline-none focus:bg-gray-400 transition"></button>
+            </div>
+            <!-- Slider controls -->
+            <button type="button"
+                class="flex absolute top-1/2 left-3 z-40 items-center justify-center w-10 h-10 bg-gray-200/50 rounded-full hover:bg-gray-300 focus:outline-none transition"
+                data-carousel-prev>
+                <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
+            </button>
+            <button type="button"
+                class="flex absolute top-1/2 right-3 z-40 items-center justify-center w-10 h-10 bg-gray-200/50 rounded-full hover:bg-gray-300 focus:outline-none transition"
+                data-carousel-next>
+                <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+            </button>
+        </div>
+    
+        <p class="mt-5 text-center text-gray-700 dark:text-gray-300">
+           
+            <a class="text-blue-600 hover:underline" href="https://flowbite.com/docs/getting-started/introduction/"
+                target="_blank">
+            </a>.
+        </p>
+        <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
+    
+    </div>
+
+
+
+
+<BR><BR><BR>
+
+
+    <div class="min-h-screen bg-red-800 py-6 flex flex-col justify-center sm:py-12" id="contact">
+        <div class="relative py-3 sm:max-w-xl sm:mx-auto">
+            <div
+                class="absolute inset-0 bg-gradient-to-r from-indigo-700 to-red-500 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl">
+            </div>
+            <div class="text-black relative px-4 py-10 bg-black-800 shadow-lg sm:rounded-3xl sm:p-20">
+    
+                <div class="text-center pb-6">
+                    <h1 class="text-3xl">Contact Us!</h1>
+    
+                    <p class="text-red-300">
+                        Fill up the form below to send us a message.
+                    </p>
+                </div>
+    
+                <form>
+    
+                    <input
+                            class="shadow mb-4 appearance-none border rounded w-full py-2 px-3 text-black-700 leading-tight focus:outline-none focus:shadow-outline"
+                            type="text" placeholder="Name" name="name">
+    
+                    <input
+                            class="shadow mb-4 appearance-none border rounded w-full py-2 px-3 text-red-700 leading-tight focus:outline-none focus:shadow-outline"
+                            type="email" placeholder="Email" name="email">
+    
+                    <input
+                            class="shadow mb-4 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            type="text" placeholder="Subject" name="_subject">
+    
+                    <textarea
+                            class="shadow mb-4 min-h-0 appearance-none border rounded h-64 w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            type="text" placeholder="Type your message here..." name="message" style="height: 121px;"></textarea>
+    
+                    <div class="flex justify-between">
+                        <input
+                            class="shadow black-600 hover:black-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                            type="submit" value="Send ➤">
+                        <input
+                            class="shadow bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                            type="reset">
+                    </div>
+    
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+    <df-messenger
+      intent="WELCOME"
+      chat-title="GFS-AI"
+      agent-id="41885421-ed00-4b61-b51f-c52dbe2bb44f"
+      language-code="en"
+    ></df-messenger>
+
+
+
+
+
+
+
+</body>
+</html>
