@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const navLinks = document.querySelectorAll('nav a');
+      
+          navLinks.forEach(link => {
+              link.addEventListener('click', function (e) {
+                  e.preventDefault();
+      
+                  const targetId = this.getAttribute('href').substring(1);
+                  const targetSection = document.getElementById(targetId);
+      
+                  window.scrollTo({
+                      top: targetSection.offsetTop-25,
+                      behavior: 'smooth'
+                  }); 
+              });
+          });
+    });
+    </script>
+
+
+</head>
+<body>
+
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="logo">MyPortfolio</div>
+            <input type="checkbox" id="menu-toggle" />
+            <label for="menu-toggle" class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#resume">Skills</a></li>
+                <li><a href="#portfolio">projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    
+
+   
+    
+    <div class="hero" id="home">
+        <div class="animated-heading">
+            <h1>SAMIULLAH BAIG</h1>
+            <h2>I'm <span class="role"></span></h2>
+            <div class="social-icons">
+                <a href="https://x.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyIiOiIiLCJteCI6IjIifQ%3D%3D%22%7D"><i class="fa fa-twitter">𝕏 </i></a>
+                <a href="https://www.facebook.com/login/"><i class="fa fa-facebook">ⓕ</i></a>
+                <a href="https://www.instagram.com/accounts/login/?hl=en"><i class="fa fa-instagram">🅾</i></a>
+                <a href="https://www.linkedin.com/"><i class="fa fa-linkedin">🇮🇳</i></a>
+            </div>
+        </div>
+        
+    </div>
+
+    <section class="about" id="about">
+        <h2 class="one" >About</h2>
+        <p class="intro-text">
+        </p>
+
+        <div class="about-container animate">
+            <div class="about-image">
+                <img src="./2.webp" alt="Profile Image">
+            </div>
+
+            <div class="about-content">
+                <h3>About Me & My Qualifications.</h3>
+                <p class="description">
+                    <em>👋 Hello, I'm Samiullah Baig!
+
+                        🎓 I completed my Matriculation and Intermediate studies in the Pre-Engineering group at Bahria Model College (E.A.B). Throughout my academic journey, I have consistently been a sharp-minded and dedicated student. ✨
+                        
+                        📚 My strong analytical skills and sharp focus enabled me to develop a solid foundation in English language proficiency alongside my technical studies.
+                        
+                        🤖 Recently, I have completed an AI and Chatbot Course from Saylani Mass IT Training (SMIT) and am currently enhancing my skills by pursuing a Web Development Course. 💻
+                        
+                        I’m passionate about learning and growing in the field of technology, and I aim to leverage my skills to contribute to innovative projects. 🚀</em>
+                </p>
+
+                <div class="details">
+                    <div class="left">
+                        <p><span>Birthday:</span> 13 jan 2005</p>
+                        <p><span>Website:</span><a href=" https://github.com/Samiullahbaig661/html_saylani_course">https://github.com</a> </p>
+                        <p><span>Phone:</span> +923182814121</p>
+                        <p><span>City:</span> Karachi , pakistan</p>
+                    </div>
+                    <div class="right">
+                        <p><span>Age:</span> 20</p>
+                        <p><span>Degree:</span> Intermediate</p>
+                        <p><span>Email:</span><a href="samiullahbaig661@gmail.com">samiullahbaig661</a></p>
+                        <p><span>Freelance:</span> Available</p>
+                    </div>
+                </div>
+
+                <p class="bottom-text">
+                    💼 For Collaborations or Projects
+                    If you have any projects or opportunities where my skills can add value, please feel free to reach out. I’m always excited to contribute to innovative and impactful work! 🚀                </p>
+            </div>
+        </div>
+    </section>
+
+ 
+
+
+
+    <section class="skills" id="resume">
+        <h2>Skills</h2>
+        <p class="intro-text">
+            Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit
+        </p>
+    
+        <div class="skills-container">
+            <div class="skill">
+                <span>HTML</span>
+                <div class="skill-bar">
+                    <div class="skill-fill" style="width: 100%;">100%</div>
+                </div>
+            </div>
+    
+            <div class="skill">
+                <span>CSS</span>
+                <div class="skill-bar">
+                    <div class="skill-fill" style="width: 90%;">90%</div>
+                </div>
+            </div>
+    
+            <div class="skill">
+                <span>JAVASCRIPT</span>
+                <div class="skill-bar">
+                    <div class="skill-fill" style="width: 75%;">75%</div>
+                </div>
+            </div>
+    
+           
+            <div class="skill">
+                <span>MICROSOFT WORD</span>
+                <div class="skill-bar">
+                    <div class="skill-fill" style="width: 90%;">90%</div>
+                </div>
+            </div>
+    
+            <div class="skill">
+                <span>PHOTOSHOP</span>
+                <div class="skill-bar">
+                    <div class="skill-fill" style="width: 55%;">55%</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <section class="selected-works" id="portfolio">
+        <h2>My  <span>Projects</span></h2>
+
+        <div class="grid-container">
+             
+            <a href="https://assign5-lac.vercel.app/" target="_blank" class="grid-item">
+                <img src="./p4.png" alt="Project 4">
+            </a>
+            <a href="https://rent-car-ashy.vercel.app/" target="_blank" class="grid-item">
+                <img src="./p1.png" alt="Project 1">
+            </a>
+
+            <a href="https://irfankhan12348800.github.io/assignment9/#" target="_blank" class="grid-item">
+                <img src="./p6.png" alt="Project 6">
+            </a>
+            <a href="https://irfankhan12348800.github.io/-web-development-bootweb/" target="_blank" class="grid-item">
+                <img src="./p2.png" alt="Project 2">
+            </a>
+
+            <a href="https://assign6-dun.vercel.app/" target="_blank" class="grid-item">
+                <img src="./p5.png" alt="Project 5">
+            </a>
+ <a href="https://saylanibot-36jj.vercel.app/" target="_blank" class="grid-item">
+    <img src="./p3.png" alt="Project 3">
+</a>
+
+        </div>
+    </section>
+
+    <div class="contact-section" id="contact">
+        <div class="contact-form">
+            <h2>Contact Us</h2>
+
+            <form>
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="Name">
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="Email">
+
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" placeholder="Subject">
+
+                <label for="message">Message</label>
+                <textarea id="message" placeholder="Message"></textarea>
+
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+
+        <div class="contact-image">
+            <img src="./page.webp" alt="Roaring Lion">
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>    
+    <script>
+        var typingEffect = new Typed(".role",{
+            strings : ["coder","web Developer","3D Designer","Editor"],
+            loop : true,
+            typeSpeed : 100,
+            backSpeed : 80,
+            backDelay : 1500
+        })
+    </script>
+    
+
+
+</body>
+</html>
