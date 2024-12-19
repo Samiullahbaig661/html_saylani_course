@@ -75,7 +75,6 @@ li:hover{
 }
 
 .nav-menu a:hover {
-    /* border-bottom-left-radius: 20%; */
     border-bottom-right-radius: 100%;
 padding: 5px ;
     color: #ffffff;
@@ -210,12 +209,7 @@ border-radius: 30%;
             transform: translateY(0);
         }
     }
-    
-
-   
-
-
-    .about {
+       .about {
         padding: 50px 20px;
         text-align: center;
         overflow: hidden; 
@@ -327,9 +321,6 @@ border-radius: 30%;
             transform: translateY(0);
         }
     }
-    
-
-
     .skills {
         padding: 50px 20px;
         text-align: center;
@@ -407,7 +398,6 @@ border-radius: 30%;
         animation-iteration-count: 5;
     }
     
-    /* Hover Animation */
     .skill:hover .skill-fill {
         background-color: #0056b3;
         transition: background-color 0.3s ease-in-out;
