@@ -594,4 +594,63 @@ border-radius: 30%;
     .contact-image img:hover {
         transform: scale(1.1);
     }
-  
+    .footer {
+        text-align: center;
+        background: linear-gradient(16deg, #1ed5df, #d94deb);
+
+        color: white;
+        padding: 30px 0;
+    }
+    
+    .footer-content h2 {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+    
+    .call-btn {
+        background: #ff7f50;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    
+    .call-btn:hover {
+        background: #ff5722;
+        transform: scale(1.1);
+    }
+    
+    .footer-icons {
+        margin: 20px 0;
+        gap: 5px;
+    }
+    
+    .icon-link {
+        margin: 0 10px;
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        background: linear-gradient(135deg, #1ac0c9, #e285ee);
+        color: white;
+        font-size: 24px;
+        border-radius: 50%;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+        text-decoration: none;
+    }
+    
+    .icon-link:hover {
+        background: #388e3c;
+        transform: scale(1.2) rotate(10deg);
+    }
+    
+    .footer-text {
+        font-size: 12px;
+        margin-top: 20px;
+        opacity:0.8;
+}
