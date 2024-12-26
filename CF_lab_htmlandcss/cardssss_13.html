@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Cards</title>
+  <link rel="stylesheet" href="styles.css">
+
+
+  <style>/* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      width: 80%;
+    }
+    .card {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .profile-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 15px;
+    }
+    .name {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .role {
+      font-size: 14px;
+      color: #666;
+    }
+    .activity-list {
+      list-style: none;
+    }
+    .activity-list li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+    .dot {
+      width: 10px;
+      height: 10px;
+      background: #00c853;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+    .activity-text {
+      flex-grow: 1;
+    }
+    .activity-text .desc {
+      font-size: 14px;
+      color: #666;
+    }
+    .date {
+      font-size: 12px;
+      color: #aaa;
+    }</style>
+</head>
+<body>
+  <div class="container">
+    <!-- Card 1 -->
+    <div class="card">
+      <div class="profile-header">
+        <img src="https://tse1.mm.bing.net/th?id=OIP.4rtF__HjmHI8cRxRlQLVowHaHa&pid=Api&P=0&h=220" alt="John Doe" class="avatar">
+        <div>
+          <h2 class="name">Raja</h2>
+          <p class="role">UX Designer</p>
+        </div>
+      </div>
+      <ul class="activity-list">
+        <li>
+          <div class="dot"></div>
+          <div class="activity-text">
+            <p class="name">Anton Knudsen</p>
+            <p class="desc">Lorem ipsum is dolorem...</p>
+          </div>
+          <p class="date">14 MAY</p>
+        </li>
+        <li>
+          <div class="dot"></div>
+          <div class="activity-text">
+            <p class="name">Anton Knudsen</p>
+            <p class="desc">Lorem ipsum is dolorem...</p>
+          </div>
+          <p class="date">14 MAY</p>
+        </li>
+        <li>
+          <div class="dot"></div>
+          <div class="activity-text">
+            <p class="name">Anton Knudsen</p>
+            <p class="desc">Lorem ipsum is dolorem...</p>
+          </div>
+          <p class="date">14 MAY</p>
+        </li>
+      </ul>
+    </div>
+
+    <div class="card">
+        <div class="profile-header">
+          <img src="https://tse1.mm.bing.net/th?id=OIP.4rtF__HjmHI8cRxRlQLVowHaHa&pid=Api&P=0&h=220" alt="John Doe" class="avatar">
+          <div>
+            <h2 class="name">abdullah khan</h2>
+            <p class="role">UX Designer</p>
+          </div>
+        </div>
+        <ul class="activity-list">
+          <li>
+            <div class="dot"></div>
+            <div class="activity-text">
+              <p class="name">Anton Knudsen</p>
+              <p class="desc">Lorem ipsum is dolorem...</p>
+            </div>
+            <p class="date">14 MAY</p>
+          </li>
+          <li>
+            <div class="dot"></div>
+            <div class="activity-text">
+              <p class="name">Anton Knudsen</p>
+              <p class="desc">Lorem ipsum is dolorem...</p>
+            </div>
+            <p class="date">14 MAY</p>
+          </li>
+          <li>
+            <div class="dot"></div>
+            <div class="activity-text">
+              <p class="name">Anton Knudsen</p>
+              <p class="desc">Lorem ipsum is dolorem...</p>
+            </div>
+            <p class="date">14 MAY</p>
+          </li>
+        </ul>
+      </div>
+
+
+      
+    <div class="card">
+        <div class="profile-header">
+          <img src="https://tse4.mm.bing.net/th?id=OIP.IGNf7GuQaCqz_RPq5wCkPgHaLH&pid=Api&P=0&h=220" alt="John Doe" class="avatar">
+          <div>
+            <h2 class="name"> samiullah </h2>
+            <p class="role">UX Designer</p>
+          </div>
+        </div>
+        <ul class="activity-list">
+          <li>
+            <div class="dot"></div>
+            <div class="activity-text">
+              <p class="name">Anton Knudsen</p>
+              <p class="desc">Lorem ipsum is dolorem...</p>
+            </div>
+            <p class="date">14 MAY</p>
+          </li>
+          <li>
+            <div class="dot"></div>
+            <div class="activity-text">
+              <p class="name">Anton Knudsen</p>
+              <p class="desc">Lorem ipsum is dolorem...</p>
+            </div>
+            <p class="date">14 MAY</p>
+          </li>
+          <li>
+            <div class="dot"></div>
+            <div class="activity-text">
+              <p class="name">Anton Knudsen</p>
+              <p class="desc">Lorem ipsum is dolorem...</p>
+            </div>
+            <p class="date">14 MAY</p>
+          </li>
+        </ul>
+      </div>
+    <!-- Repeat Card 2 -->
+    <div class="card">
+      <div class="profile-header">
+        <img src="https://tse4.mm.bing.net/th?id=OIP.Sf4FzQUGOjRIegxmUkDB9QHaHa&pid=Api&P=0&h=220" alt="User Doe" class="avatar">
+        <div>
+          <h2 class="name">salman </h2>
+          <p class="role">UX Designer</p>
+        </div>
+      </div>
+      <ul class="activity-list">
+        <li>
+          <div class="dot"></div>
+          <div class="activity-text">
+            <p class="name">Anton Knudsen</p>
+            <p class="desc">Lorem ipsum is dolorem...</p>
+          </div>
+          <p class="date">14 MAY</p>
+        </li>
+        <li>
+          <div class="dot"></div>
+          <div class="activity-text">
+            <p class="name">Anton Knudsen</p>
+            <p class="desc">Lorem ipsum is dolorem...</p>
+          </div>
+          <p class="date">14 MAY</p>
+        </li>
+        <li>
+          <div class="dot"></div>
+          <div class="activity-text">
+            <p class="name">Anton Knudsen</p>
+            <p class="desc">Lorem ipsum is dolorem...</p>
+          </div>
+          <p class="date">14 MAY</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
