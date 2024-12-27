@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Learning Platform</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .course-card {
+            margin-bottom: 20px;
+        }
+
+        .course-card img {
+            height: 200px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar Section -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">E-Learning</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="loooogin.html">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Featured Courses Section -->
+    <div class="container my-5">
+        <h2>Featured Courses</h2>
+        <div class="row">
+            <!-- Course 1 -->
+            <div class="col-md-4 course-card">
+                <div class="card">
+                    <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Course 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Course 1: HTML & CSS Basics</h5>
+                        <p class="card-text">Learn the basics of HTML and CSS for building beautiful websites.</p>
+                        <button class="btn btn-primary" onclick="enroll('HTML & CSS Basics')">Enroll</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course 2 -->
+            <div class="col-md-4 course-card">
+                <div class="card">
+                    <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Course 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Course 2: Introduction to JavaScript</h5>
+                        <p class="card-text">Learn the fundamentals of JavaScript for web interactivity.</p>
+                        <button class="btn btn-primary" onclick="enroll('Introduction to JavaScript')">Enroll</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course 3 -->
+            <div class="col-md-4 course-card">
+                <div class="card">
+                    <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Course 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Course 3: Python Programming</h5>
+                        <p class="card-text">Master Python programming with hands-on projects and exercises.</p>
+                        <button class="btn btn-primary" onclick="enroll('Python Programming')">Enroll</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 E-Learning Platform. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript for interactive features -->
+    <script>
+        function enroll(courseName) {
+            alert("You have successfully enrolled in " + courseName + "!");
+        }
+    </script>
+</body>
+
+</html>
