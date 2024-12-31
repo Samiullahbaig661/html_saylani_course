@@ -27,3 +27,18 @@
     
 //    }
 // }
+
+
+
+
+
+
+
+
+
+
+let table = parseInt(prompt("Enter the nummber which you want table"))
+for (let i = 1; i <= 10; i++) {
+    let reult = table * i 
+    console.log(`${table} x ${i} = ${reult}`)
+}

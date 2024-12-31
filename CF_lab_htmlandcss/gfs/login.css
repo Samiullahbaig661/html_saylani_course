@@ -4,21 +4,27 @@ div.maincontainer{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(36, 212, 65);
+    background-color: rgb(255, 255, 255);
 }
 div.container{
-    background-color: aqua;
+    background: linear-gradient(0deg, #ff6f6f, #c71e1e);
     width : 450px;
    
     display: flex;
-     
+     border-radius: 15px ;
      align-items: center; 
+}
+div.head{
+    background: linear-gradient(135deg, #dd1010, #2e1231);
+    background-clip: text; /* For modern browsers */
+    color: transparent;
 }
 div.one {
     padding:30px;
-    height: 330px;
+    height: 400px;
     font-size: 20px;
-    background-color: rgb(225, 232, 14);
+    background: linear-gradient(90deg, #cdc8c8, #ec4545);
+    box-shadow: 14px 15px 60px  #bc2323;
     width: 100px;
     border-top-right-radius: 50px ;
     border-bottom-right-radius: 50px ;
@@ -32,11 +38,11 @@ input[type="email"],
 input[type="password"] {
     width: 300px;             
     height: 40px;            
-    font-size: 15px;        
+    font-size: 25px;        
     padding: 10px 15px;      
     border-radius: 12px;     
-    background-color: #5e2ca5; 
-    color: white;             
+    background-color: #c8bfd5; 
+    color: rgb(17, 8, 8);             
     border: 1px solid #5e2ca5; 
     outline: none;          
     transition: all 0.3s ease-in-out; 
@@ -49,9 +55,13 @@ div.btn{
     margin-top: 5px;
 }    
 .ff,.gg{
-background-color: #936fc6;
+background: linear-gradient(90deg, #fda1a1, #ac3a3a);
 height: 50px;
 width: 100px;
 border-radius: 10px;
-list-style: none;
+    font-size: 20px;        
+    list-style: none;
+}
+.buil{
+    color: rgb(213, 13, 13);
 }
