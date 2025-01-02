@@ -16,7 +16,7 @@ div.container{
 }
 div.head{
     background: linear-gradient(135deg, #dd1010, #2e1231);
-    background-clip: text; /* For modern browsers */
+    background-clip: text;
     color: transparent;
 }
 div.one {

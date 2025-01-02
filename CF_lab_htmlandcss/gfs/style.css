@@ -1,6 +1,6 @@
 .bg-gradient-blue {
     background: linear-gradient(45deg, #0a0c0e, #ee2f19);
-    color: white; /* Optional for better text visibility */
+    color: white; 
     height : 90px;
     box-shadow: 4px 4px 100px rgb(216, 229, 32);
     border-bottom-left-radius: 30% ;
@@ -67,6 +67,6 @@
 }
 .gradient-text {
     background: linear-gradient(135deg, #dd1010, #2e1231);
-    background-clip: text; /* For modern browsers */
-    color: transparent; /* Make the text transparent so the gradient is visible */
+    background-clip: text;
+    color: transparent; 
   }
