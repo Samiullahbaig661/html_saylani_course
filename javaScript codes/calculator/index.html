@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+            <div class="valuepaste"></div>
+            <button class="allclear" onclick="allclear()" >AC</button>
+            <button class="clear" onclick="oneclear()" >C</button>
+            <button  class="operand" onclick="show(9)">9</button>
+            <button class="operand" onclick="show(8)">8</button>
+            <button class="operand" onclick="show(7)">7</button>
+            <button class="operand" onclick="show(6)">6</button>
+            <button class="operand" onclick="show(5)">5</button>
+            <button class="operand" onclick="show(4)">4</button>
+            <button class="operand" onclick="show(3)">3</button>
+            <button class="operand" onclick="show(2)">2</button>
+            <button class="operand" onclick="show(1)">1</button>
+            <button class="operand" onclick="show(0)">0</button>
+            <button class="operator" onclick="show('*')">x</button>
+            <button class="operator" onclick="show('/')">/</button>
+            <button class="operator" onclick="show('-')">-</button>
+            <button class="operator" onclick="show('+')">+</button>
+            <button class="operator" onclick="show('.')">.</button>
+            <button class="result" onclick="performcalculation()">=</button>
+        </div>
+
+    </div>
+    <script src="calculator.js"></script>
+</body>
+</html>
