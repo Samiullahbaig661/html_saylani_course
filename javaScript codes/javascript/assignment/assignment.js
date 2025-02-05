@@ -24,17 +24,23 @@ let now = new Date()
 let hours = now.getHours()
 let min = now.getMinutes()
 let sec = now.getSeconds()
-let period  ;
-if (hours>=12) {
+let orignal_hours  = hours
+ hours = hours%12||12
+let period ;
+let formated_hour;
+
+formated_hour = hours < 10 ? '0' + hours : hours;
+let formated_min = min < 10 ? '0' + min : min;
+let formated_sec = sec < 10 ? '0' + sec : sec;
+if (orignal_hours>=12) {
     period = "PM"
-     main.style.backgroundImage = "url('https://wallpaperaccess.com/full/4025627.jpg')";
+    main.style.backgroundImage = "url('https://wallpaperaccess.com/full/4025627.jpg')";
 }
 else{
     period  = "AM"
-     main.style.backgroundImage = "url('http://www.pixelstalk.net/wp-content/uploads/2016/06/Beautiful-night-Images-hd.jpg')";
+    main.style.backgroundImage = "url('http://www.pixelstalk.net/wp-content/uploads/2016/06/Beautiful-night-Images-hd.jpg')";
 }
-hours = hours%12||12
-noode.innerHTML = `${hours} : ${min} : ${sec} ${period}`
+noode.innerHTML = `${formated_hour } : ${formated_min} : ${formated_sec} ${period}`
 }
 setInterval(uptade,1000)
 uptade()
