@@ -187,6 +187,124 @@ background-color: grey;
 
 
 
+/* motiwala tasks */
+/* .container {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+}
+
+.main {
+    display: flex;
+    flex-direction: column; 
+    gap: 10px; 
+    background-color: rgb(209, 103, 103);
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: -10px -7px 10px rgba(0, 0, 0);
+}
+
+input, button {
+    padding: 8px;
+    width: 200px;
+    border-radius: 18px;
+    border: none;
+    box-shadow: -10px -7px 10px rgba(0, 0, 0);
+    color: black;
+    transition: 0.3s ease-in-out; 
+}
+input:hover, button:hover {
+    transform: scale(1.1) translate(5px, -5px); 
+    transition: 0.3s ease-in-out;
+} */
 
 
-  /* wheather app */
+
+
+
+
+/* PEOPLE COUNTER  */
+/* .container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(72, 150, 20);
+}
+.main{
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    font-size: 30px;
+    width: 600px;
+    height: 600px;
+    border-radius: 100%;
+    border: 10px solid transparent ; 
+    background-image: linear-gradient(70deg, red, yellow, blue);
+    background-origin: border-box; 
+    background-clip: border-box;
+}
+.main h2{
+    font-size: 70px;
+    font-weight: 900;
+}
+#increment{
+    font-size: 30px;
+    background-color: transparent;
+    border: none;
+    border:5px solid ;
+    border-radius: 10px;
+    padding-inline-start: 10px;
+} */
+
+/* .nav-container{ */
+    /* background-color: rgb(17, 0, 255); */
+    /* height: 100px;
+    width: 100vw;
+    position: absolute;
+}
+.oneside{
+    height: 73px;
+    display:flex;
+    justify-content: space-around;
+    position: relative;
+    top: 10px;
+    border: 1px solid grey;
+    align-items: center;
+}
+.list
+{
+    list-style: none;
+    display:flex;
+    height: 40px;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+    font-size: 25px;
+    font-weight: 700;
+    position: relative;
+    
+}
+#browse{
+    background-color: rgb(72, 150, 20);
+    padding: 20px 70px 20px 10px;
+    color: rgb(255, 232, 232);
+    font-size: 28px;
+    font-weight: 900;
+}
+.inquery{
+    list-style: none;
+    font-size: 25px;
+    font-weight: 700;
+    background-color: rgb(72, 150, 20);
+    padding:15px;
+    color: rgb(255, 232, 232);
+}
+
+
+ */
