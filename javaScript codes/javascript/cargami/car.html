@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Game</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: #b29292;
+        }
+        #gameArea {
+            width: 400px;
+            height: 600px;
+            background: url('./pictures/road.png') repeat-y;
+            background-size: cover;
+            position: relative;
+            margin: auto;
+            top: 50px;
+            overflow: hidden;
+            animation: roadMove 2s linear infinite;
+        }
+        @keyframes roadMove {
+            from { background-position-y: 0; }
+            to { background-position-y: 600px; }
+        }
+        .car {
+            width: 50px;
+            height: 100px;
+            background: url('./pictures/car1.png') no-repeat center;
+            background-size: contain;
+            position: absolute;
+            bottom: 10px;
+            left: 185px; 
+        }
+        .obstacle {
+            width: 50px;
+            height: 100px;
+            background: url('./pictures/car2.png') no-repeat center;
+            background-size: contain;
+            position: absolute;
+            top: -100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="gameArea">
+        <div class="car" id="player"></div>
+    </div>
+    <script>
+        const player = document.getElementById("player");
+        const gameArea = document.getElementById("gameArea");
+        let playerX = 185; 
+        let gameOver = false;
+
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "ArrowLeft" && playerX > 0) {
+                playerX -= 25;
+            } else if (event.key === "ArrowRight" && playerX < 370) { 
+                playerX += 25;
+            }
+            player.style.left = playerX + "px";
+        });
+
+        function createObstacle() {
+            if (gameOver) return;
+            let obstacle = document.createElement("div");
+            obstacle.classList.add("obstacle");
+            obstacle.style.left = Math.floor(Math.random() * 370) + "px"; 
+            gameArea.appendChild(obstacle);
+
+            let obstacleY = -100;
+            function moveObstacle() {
+                if (gameOver) return;
+                obstacleY += 5;
+                obstacle.style.top = obstacleY + "px";
+                if (obstacleY > 600) {
+                    obstacle.remove();
+                }
+                if (detectCollision(obstacle)) {
+                    gameOver = true;
+                    alert("Game Over!");
+                } else {
+                    requestAnimationFrame(moveObstacle);
+                }
+            }
+            moveObstacle();
+        }
+
+        function detectCollision(obstacle) {
+            const HITBOX_SHRINK = 0.7; // 30% smaller hitboxes
+            
+            let playerRect = player.getBoundingClientRect();
+            let obstacleRect = obstacle.getBoundingClientRect();
+
+            // Calculate shrunk player hitbox
+            const pWidth = playerRect.width * HITBOX_SHRINK;
+            const pHeight = playerRect.height * HITBOX_SHRINK;
+            const pLeft = playerRect.left + (playerRect.width - pWidth)/2;
+            const pTop = playerRect.top + (playerRect.height - pHeight)/2;
+
+            // Calculate shrunk obstacle hitbox
+            const oWidth = obstacleRect.width * HITBOX_SHRINK;
+            const oHeight = obstacleRect.height * HITBOX_SHRINK;
+            const oLeft = obstacleRect.left + (obstacleRect.width - oWidth)/2;
+            const oTop = obstacleRect.top + (obstacleRect.height - oHeight)/2;
+
+            return (
+                pLeft < oLeft + oWidth &&
+                pLeft + pWidth > oLeft &&
+                pTop < oTop + oHeight &&
+                pTop + pHeight > oTop
+            );
+        }
+
+        setInterval(createObstacle, 2000);
+    </script>
+</body>
+</html>

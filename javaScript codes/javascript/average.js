@@ -137,26 +137,26 @@
 
 // task number 6
  
-const state = document.getElementById('switchstate');
-const toggler = document.getElementById('toglerswitch');
-const main = document.getElementById('main')
-const ce = document.getElementById('che')
-let ison = false;
-function clickk(){
-    ison = !ison
-    if (ison) { 
-        toggler.classList.add('active')   
-        state.innerHTML = "ON" 
-        ce.innerHTML = "Dark mode" 
-         main.style.backgroundColor = "black";
-}
-    else{
-        toggler.classList.remove('active')   
-        state.innerHTML = "OFF"
-        ce.innerHTML = "white mode" 
-        main.style.backgroundColor = "white";
-    }
-}
+// const state = document.getElementById('switchstate');
+// const toggler = document.getElementById('toglerswitch');
+// const main = document.getElementById('main')
+// const ce = document.getElementById('che')
+// let ison = false;
+// function clickk(){
+//     ison = !ison
+//     if (ison) { 
+//         toggler.classList.add('active')   
+//         state.innerHTML = "ON" 
+//         ce.innerHTML = "Dark mode" 
+//          main.style.backgroundColor = "black";
+// }
+//     else{
+//         toggler.classList.remove('active')   
+//         state.innerHTML = "OFF"
+//         ce.innerHTML = "white mode" 
+//         main.style.backgroundColor = "white";
+//     }
+// }
 
 
 
@@ -596,12 +596,165 @@ console.clear()
 
 
 
-let admin = {name : "admin"}
-let user = {name : "userrr", admin: "admin"}
-function info(){
-    console.log(`hi this is me ${this.name} and my admin is ${this.admin?.name || "N/A"}`)
-}
+// let admin = {name : "admin"}
+// let user = {name : "userrr", admin: "admin"}
+// function info(){
+//     console.log(`hi this is me ${this.name} and my admin is ${this.admin?.name || "N/A"}`)
+// }
 
-admin.f = info
-user.f = info
-admin.f()
+// admin.f = info
+// user.f = info
+// admin.f()
+
+
+
+
+
+
+// this use of this
+
+
+// let calculator={
+//     sum(){
+//         return a + b;
+//     },
+//     multi(){
+//         return a * b;
+//     },
+//     read(){
+//         a = 14;
+//         b = 16;
+//     }
+// }
+
+
+// calculator.read()
+// let sum = calculator.sum();
+// let multi = calculator.multi();
+// console.log(sum)
+// console.log(multi)
+
+
+
+// Create the card container
+const card = document.createElement('div');
+document.body.appendChild(card);
+
+// Add CSS styles using JavaScript
+const style = document.createElement('style');
+style.textContent = `
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0;
+        font-family: Arial, sans-serif;
+    }
+
+    .card {
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        width: 300px;
+        padding: 20px;
+        transition: transform 0.3s;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+    }
+
+    .card-image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    .card-title {
+        margin: 15px 0;
+        font-size: 1.5em;
+        color: #333;
+    }
+
+    .card-description {
+        color: #666;
+        font-size: 0.9em;
+        line-height: 1.5;
+        margin-bottom: 15px;
+    }
+
+    .price {
+        font-size: 1.4em;
+        color: #2ecc71;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+
+    .shop-button {
+        background-color: #3498db;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+        font-size: 1em;
+        transition: background-color 0.3s;
+    }
+
+    .shop-button:hover {
+        background-color: #2980b9;
+    }
+`;
+document.head.appendChild(style);
+
+// Card content
+card.className = 'card';
+
+// Create image element
+const img = document.createElement('img');
+img.className = 'card-image';
+img.src = 'https://picsum.photos/300/200'; // Random placeholder image
+img.alt = 'Product Image';
+card.appendChild(img);
+
+// Create text content container
+const content = document.createElement('div');
+content.className = 'card-content';
+card.appendChild(content);
+
+// Create title
+const title = document.createElement('h2');
+title.className = 'card-title';
+title.textContent = 'Wireless Headphones';
+content.appendChild(title);
+
+// Create description
+const description = document.createElement('p');
+description.className = 'card-description';
+description.textContent = 'Experience crystal-clear sound with our premium wireless headphones. Featuring active noise cancellation and 24-hour battery life.';
+content.appendChild(description);
+
+// Create price
+const price = document.createElement('div');
+price.className = 'price';
+price.textContent = '$299.99';
+content.appendChild(price);
+
+// Create button
+const button = document.createElement('button');
+button.className = 'shop-button';
+button.textContent = 'Shop Now';
+
+// Add button hover effect using JavaScript
+button.addEventListener('mouseover', () => {
+    button.style.backgroundColor = '#2980b9';
+});
+button.addEventListener('mouseout', () => {
+    button.style.backgroundColor = '#3498db';
+});
+
+content.appendChild(button);
