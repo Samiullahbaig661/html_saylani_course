@@ -637,124 +637,168 @@ console.clear()
 
 
 // Create the card container
-const card = document.createElement('div');
-document.body.appendChild(card);
+// const card = document.createElement('div');
+// document.body.appendChild(card);
 
-// Add CSS styles using JavaScript
-const style = document.createElement('style');
-style.textContent = `
-    body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        margin: 0;
-        background-color: #f0f0f0;
-        font-family: Arial, sans-serif;
-    }
+// // Add CSS styles using JavaScript
+// const style = document.createElement('style');
+// style.textContent = `
+//     body {
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         min-height: 100vh;
+//         margin: 0;
+//         background-color: #f0f0f0;
+//         font-family: Arial, sans-serif;
+//     }
 
-    .card {
-        background-color: white;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        width: 300px;
-        padding: 20px;
-        transition: transform 0.3s;
-    }
+//     .card {
+//         background-color: white;
+//         border-radius: 10px;
+//         box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+//         width: 300px;
+//         padding: 20px;
+//         transition: transform 0.3s;
+//     }
 
-    .card:hover {
-        transform: translateY(-5px);
-    }
+//     .card:hover {
+//         transform: translateY(-5px);
+//     }
 
-    .card-image {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-        border-radius: 8px;
-    }
+//     .card-image {
+//         width: 100%;
+//         height: 200px;
+//         object-fit: cover;
+//         border-radius: 8px;
+//     }
 
-    .card-title {
-        margin: 15px 0;
-        font-size: 1.5em;
-        color: #333;
-    }
+//     .card-title {
+//         margin: 15px 0;
+//         font-size: 1.5em;
+//         color: #333;
+//     }
 
-    .card-description {
-        color: #666;
-        font-size: 0.9em;
-        line-height: 1.5;
-        margin-bottom: 15px;
-    }
+//     .card-description {
+//         color: #666;
+//         font-size: 0.9em;
+//         line-height: 1.5;
+//         margin-bottom: 15px;
+//     }
 
-    .price {
-        font-size: 1.4em;
-        color: #2ecc71;
-        font-weight: bold;
-        margin-bottom: 15px;
-    }
+//     .price {
+//         font-size: 1.4em;
+//         color: #2ecc71;
+//         font-weight: bold;
+//         margin-bottom: 15px;
+//     }
 
-    .shop-button {
-        background-color: #3498db;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 5px;
-        cursor: pointer;
-        width: 100%;
-        font-size: 1em;
-        transition: background-color 0.3s;
-    }
+//     .shop-button {
+//         background-color: #3498db;
+//         color: white;
+//         border: none;
+//         padding: 10px 20px;
+//         border-radius: 5px;
+//         cursor: pointer;
+//         width: 100%;
+//         font-size: 1em;
+//         transition: background-color 0.3s;
+//     }
 
-    .shop-button:hover {
-        background-color: #2980b9;
-    }
-`;
-document.head.appendChild(style);
+//     .shop-button:hover {
+//         background-color: #2980b9;
+//     }
+// `;
+// document.head.appendChild(style);
 
-// Card content
-card.className = 'card';
+// // Card content
+// card.className = 'card';
 
-// Create image element
-const img = document.createElement('img');
-img.className = 'card-image';
-img.src = 'https://picsum.photos/300/200'; // Random placeholder image
-img.alt = 'Product Image';
-card.appendChild(img);
+// // Create image element
+// const img = document.createElement('img');
+// img.className = 'card-image';
+// img.src = 'https://picsum.photos/300/200'; // Random placeholder image
+// img.alt = 'Product Image';
+// card.appendChild(img);
 
-// Create text content container
-const content = document.createElement('div');
-content.className = 'card-content';
-card.appendChild(content);
+// // Create text content container
+// const content = document.createElement('div');
+// content.className = 'card-content';
+// card.appendChild(content);
 
-// Create title
-const title = document.createElement('h2');
-title.className = 'card-title';
-title.textContent = 'Wireless Headphones';
-content.appendChild(title);
+// // Create title
+// const title = document.createElement('h2');
+// title.className = 'card-title';
+// title.textContent = 'Wireless Headphones';
+// content.appendChild(title);
 
-// Create description
-const description = document.createElement('p');
-description.className = 'card-description';
-description.textContent = 'Experience crystal-clear sound with our premium wireless headphones. Featuring active noise cancellation and 24-hour battery life.';
-content.appendChild(description);
+// // Create description
+// const description = document.createElement('p');
+// description.className = 'card-description';
+// description.textContent = 'Experience crystal-clear sound with our premium wireless headphones. Featuring active noise cancellation and 24-hour battery life.';
+// content.appendChild(description);
 
-// Create price
-const price = document.createElement('div');
-price.className = 'price';
-price.textContent = '$299.99';
-content.appendChild(price);
+// // Create price
+// const price = document.createElement('div');
+// price.className = 'price';
+// price.textContent = '$299.99';
+// content.appendChild(price);
 
-// Create button
-const button = document.createElement('button');
-button.className = 'shop-button';
-button.textContent = 'Shop Now';
+// // Create button
+// const button = document.createElement('button');
+// button.className = 'shop-button';
+// button.textContent = 'Shop Now';
 
-// Add button hover effect using JavaScript
-button.addEventListener('mouseover', () => {
-    button.style.backgroundColor = '#2980b9';
-});
-button.addEventListener('mouseout', () => {
-    button.style.backgroundColor = '#3498db';
-});
+// // Add button hover effect using JavaScript
+// button.addEventListener('mouseover', () => {
+//     button.style.backgroundColor = '#2980b9';
+// });
+// button.addEventListener('mouseout', () => {
+//     button.style.backgroundColor = '#3498db';
+// });
 
-content.appendChild(button);
+// content.appendChild(button);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+async function sami() {
+    let karachi_weather = new Promise((res, rej) => {
+        setTimeout(() => {
+            res("Temp is 19.7");
+        }, 2300);
+    });
+    let hydrabad_weather = new Promise((res, rej) => {
+        setTimeout(() => {
+            res("HYD Temp is 25.3 C");
+        }, 6244);
+    });
+    let kar = await karachi_weather;
+    // console.log(`temp : ${kar}`);
+    let kyd = await hydrabad_weather;
+    // console.log(`temp : ${kyd}`);
+    return [kar, kyd];
+}
+let sammmi = async()=>{
+    setTimeout(()=>{
+        console.log( "hy what's up")
+    },2500)
+}
+async function mainnn(){
+    let a = await sami();
+    console.log (a)
+    await sammmi()
+
+
+}
+mainnn()

@@ -1,0 +1,126 @@
+{
+    "status": "ok",
+    "totalResults": 30,
+    "articles": [
+      {
+        "source": { "id": "cnn", "name": "CNN" },
+        "author": "John Doe",
+        "title": "Global economy shows signs of recovery amid ongoing challenges",
+        "description": "Economic analysts point to positive indicators in manufacturing and consumer spending, though inflation concerns remain.",
+        "url": "https://example.com/article1",
+        "urlToImage": "https://picsum.photos/id/1/600/400",
+        "publishedAt": "2025-03-06T12:00:00Z",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero."
+      },
+      {
+        "source": { "id": "bbc", "name": "BBC News" },
+        "author": "Jane Smith",
+        "title": "New breakthrough in renewable energy storage announced",
+        "description": "Scientists develop battery technology that could make renewable energy more reliable and cost-effective for grid-scale applications.",
+        "url": "https://example.com/article2",
+        "urlToImage": "https://picsum.photos/id/2/600/400",
+        "publishedAt": "2025-03-05T10:30:00Z",
+        "content": "Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis."
+      },
+      {
+        "source": { "id": "tech-daily", "name": "Tech Daily" },
+        "author": "Michael Chan",
+        "title": "Latest smartphone features AI-powered photography capabilities",
+        "description": "The newest flagship device uses machine learning to optimize photos in real-time under any lighting conditions.",
+        "url": "https://example.com/article3",
+        "urlToImage": "https://picsum.photos/id/3/600/400",
+        "publishedAt": "2025-03-05T08:15:00Z",
+        "content": "Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh."
+      },
+      {
+        "source": { "id": "sports-network", "name": "Sports Network" },
+        "author": "Robert Johnson",
+        "title": "Underdog team makes surprising playoff run",
+        "description": "Against all odds, the team that finished last season at the bottom of the standings is now in championship contention.",
+        "url": "https://example.com/article4",
+        "urlToImage": "https://picsum.photos/id/4/600/400",
+        "publishedAt": "2025-03-04T22:45:00Z",
+        "content": "Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam."
+      },
+      {
+        "source": { "id": "health-today", "name": "Health Today" },
+        "author": "Sarah Williams",
+        "title": "New study suggests link between gut health and mental wellbeing",
+        "description": "Researchers find compelling evidence that microbiome composition may influence psychological health more than previously thought.",
+        "url": "https://example.com/article5",
+        "urlToImage": "https://picsum.photos/id/5/600/400",
+        "publishedAt": "2025-03-04T14:20:00Z",
+        "content": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui."
+      },
+      {
+        "source": { "id": "business-insider", "name": "Business Insider" },
+        "author": "David Chen",
+        "title": "Startup secures record funding for sustainable packaging solution",
+        "description": "The company's biodegradable alternative to plastic has attracted major investment from leading venture capital firms.",
+        "url": "https://example.com/article6",
+        "urlToImage": "https://picsum.photos/id/6/600/400",
+        "publishedAt": "2025-03-03T16:50:00Z",
+        "content": "Praesent blandit dolor. Sed non quam. In vel mi sit amet augue congue elementum."
+      },
+      {
+        "source": { "id": "science-mag", "name": "Science Magazine" },
+        "author": "Emily Roberts",
+        "title": "Mars rover discovers unusual mineral formations",
+        "description": "The findings could provide new insights into the planet's geological history and potential for supporting life.",
+        "url": "https://example.com/article7",
+        "urlToImage": "https://picsum.photos/id/7/600/400",
+        "publishedAt": "2025-03-03T09:10:00Z",
+        "content": "Morbi in ipsum sit amet pede facilisis laoreet. Donec lacus nunc, viverra nec, blandit vel, egestas et, augue."
+      },
+      {
+        "source": { "id": "entertainment-weekly", "name": "Entertainment Weekly" },
+        "author": "James Wilson",
+        "title": "Award-winning director announces ambitious new project",
+        "description": "The film will feature an ensemble cast and is expected to begin production later this year.",
+        "url": "https://example.com/article8",
+        "urlToImage": "https://picsum.photos/id/8/600/400",
+        "publishedAt": "2025-03-02T20:30:00Z",
+        "content": "Vestibulum tincidunt malesuada tellus. Ut ultrices ultrices enim. Curabitur sit amet mauris."
+      },
+      {
+        "source": { "id": "travel-explorer", "name": "Travel Explorer" },
+        "author": "Lisa Brown",
+        "title": "Hidden gems: Underrated destinations for your next vacation",
+        "description": "Escape the tourist crowds with these lesser-known but equally stunning locations around the world.",
+        "url": "https://example.com/article9",
+        "urlToImage": "https://picsum.photos/id/9/600/400",
+        "publishedAt": "2025-03-02T11:45:00Z",
+        "content": "Morbi in dui quis est pulvinar ullamcorper. Nulla facilisi. Integer lacinia sollicitudin massa."
+      },
+      {
+        "source": { "id": "eco-watch", "name": "Eco Watch" },
+        "author": "Thomas Green",
+        "title": "Coastal city implements innovative flood defense system",
+        "description": "The nature-based solution combines technology and ecological restoration to protect vulnerable communities.",
+        "url": "https://example.com/article10",
+        "urlToImage": "https://picsum.photos/id/10/600/400",
+        "publishedAt": "2025-03-01T15:15:00Z",
+        "content": "Cras metus. Sed aliquet risus a tortor. Integer id quam. Morbi mi. Quisque nisl felis, venenatis tristique, dignissim in, ultrices sit amet, augue."
+      },
+      {
+        "source": { "id": "tech-daily", "name": "Tech Daily" },
+        "author": "Michelle Parker",
+        "title": "Tech giants commit to new data privacy standards",
+        "description": "The voluntary framework goes beyond current regulatory requirements and emphasizes user control over personal information.",
+        "url": "https://example.com/article11",
+        "urlToImage": "https://picsum.photos/id/11/600/400",
+        "publishedAt": "2025-03-01T08:00:00Z",
+        "content": "Proin sodales libero eget ante. Nulla quam. Aenean laoreet. Vestibulum nisi lectus, commodo ac, facilisis ac, ultricies eu, pede."
+      },
+      {
+        "source": { "id": "sports-network", "name": "Sports Network" },
+        "author": "Mark Thompson",
+        "title": "Young athlete breaks decade-old world record",
+        "description": "The 19-year-old's performance has stunned the sports world and established them as a rising star to watch.",
+        "url": "https://example.com/article12",
+        "urlToImage": "https://picsum.photos/id/12/600/400",
+        "publishedAt": "2025-02-28T19:20:00Z",
+        "content": "Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat."
+      }
+    ]
+  }

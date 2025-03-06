@@ -1,0 +1,590 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global News Today</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        
+        header {
+            background-color: #1a1a2e;
+            color: white;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: #ff6b6b;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #ff6b6b;
+        }
+        
+        .search-container {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        
+        .search-container input {
+            padding: 0.5rem;
+            border: none;
+            border-radius: 4px;
+            width: 300px;
+        }
+        
+        .search-container button {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 4px;
+            background-color: #ff6b6b;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .search-container button:hover {
+            background-color: #e45858;
+        }
+        
+        .category-filter {
+            max-width: 1200px;
+            margin: 1rem auto;
+            display: flex;
+            gap: 1rem;
+            overflow-x: auto;
+            padding: 0.5rem;
+        }
+        
+        .category-btn {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 20px;
+            background-color: #e0e0e0;
+            cursor: pointer;
+            transition: all 0.3s;
+            white-space: nowrap;
+        }
+        
+        .category-btn:hover, .category-btn.active {
+            background-color: #1a1a2e;
+            color: white;
+        }
+        
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        .section-title {
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #1a1a2e;
+            border-left: 5px solid #ff6b6b;
+            padding-left: 1rem;
+        }
+        
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .news-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .placeholder-img {
+            width: 100%;
+            height: 180px;
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 1rem;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .card-content {
+            padding: 1.5rem;
+        }
+        
+        .card-source {
+            font-size: 0.8rem;
+            color: #ff6b6b;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+        
+        .card-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 0.8rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        .card-description {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 1rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            line-height: 1.5;
+        }
+        
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8rem;
+            color: #999;
+        }
+        
+        .read-more {
+            color: #1a1a2e;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        
+        .read-more:hover {
+            color: #ff6b6b;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 2rem;
+            font-size: 1.2rem;
+            color: #666;
+        }
+        
+        .error-message {
+            text-align: center;
+            padding: 2rem;
+            font-size: 1.2rem;
+            color: #e45858;
+            background-color: #ffedee;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+        
+        .load-more {
+            display: block;
+            margin: 2rem auto;
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 4px;
+            background-color: #1a1a2e;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .load-more:hover {
+            background-color: #2a2a4e;
+        }
+        
+        footer {
+            background-color: #1a1a2e;
+            color: white;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+        }
+        
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .footer-section h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: #ff6b6b;
+        }
+        
+        .footer-section p, .footer-section a {
+            color: #ccc;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            display: block;
+            text-decoration: none;
+        }
+        
+        .footer-section a:hover {
+            color: white;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 2rem;
+            border-top: 1px solid #333;
+            color: #888;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            nav ul {
+                margin-top: 1rem;
+                flex-wrap: wrap;
+            }
+            
+            .search-container {
+                width: 100%;
+            }
+            
+            .search-container input {
+                width: 100%;
+            }
+            
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">Global<span>News</span></a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">World</a></li>
+                    <li><a href="#">Business</a></li>
+                    <li><a href="#">Technology</a></li>
+                    <li><a href="#">Sports</a></li>
+                    <li><a href="#">Entertainment</a></li>
+                </ul>
+            </nav>
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Search for news...">
+                <button id="search-button">Search</button>
+            </div>
+        </div>
+    </header>
+    
+    <div class="category-filter" id="category-filter">
+        <button class="category-btn active" data-category="general">General</button>
+        <button class="category-btn" data-category="business">Business</button>
+        <button class="category-btn" data-category="technology">Technology</button>
+        <button class="category-btn" data-category="health">Health</button>
+        <button class="category-btn" data-category="science">Science</button>
+        <button class="category-btn" data-category="sports">Sports</button>
+        <button class="category-btn" data-category="entertainment">Entertainment</button>
+    </div>
+    
+    <main>
+        <section id="top-headlines">
+            <h2 class="section-title">Top Headlines</h2>
+            <div class="news-grid" id="top-headlines-grid">
+                <!-- News cards will be inserted here -->
+            </div>
+            <div id="loading-indicator" class="loading">Loading news...</div>
+            <div id="error-message" class="error-message" style="display: none;"></div>
+            <button id="load-more" class="load-more" style="display: none;">Load More</button>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Global News provides the latest and most reliable news from around the world. Our mission is to keep you informed with accurate reporting.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Categories</h3>
+                <a href="#">World</a>
+                <a href="#">Business</a>
+                <a href="#">Technology</a>
+                <a href="#">Health</a>
+                <a href="#">Science</a>
+                <a href="#">Sports</a>
+                <a href="#">Entertainment</a>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@globalnews.com</p>
+                <p>Phone: +1 (555) 123-4567</p>
+                <p>Address: 123 News Street, Media City, NY 10001</p>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2025 Global News. All rights reserved. Powered by NewsAPI.
+        </div>
+    </footer>
+
+    <script>
+        // ===== IMPORTANT: Replace with your actual NewsAPI key =====
+        const API_KEY = '9eb3f5e2a2014e66b6d5ddbd22e9dc7c';
+        
+        // Global variables
+        let currentPage = 1;
+        let currentCategory = 'general';
+        let currentQuery = '';
+        let totalResults = 0;
+        let articlesLoaded = 0;
+        
+        // DOM Elements
+        const topHeadlinesGrid = document.getElementById('top-headlines-grid');
+        const loadingIndicator = document.getElementById('loading-indicator');
+        const errorMessage = document.getElementById('error-message');
+        const loadMoreButton = document.getElementById('load-more');
+        const searchInput = document.getElementById('search-input');
+        const searchButton = document.getElementById('search-button');
+        const categoryButtons = document.querySelectorAll('.category-btn');
+        
+        // Format date to a readable format
+        function formatDate(dateString) {
+            const options = { year: 'numeric', month: 'short', day: 'numeric' };
+            return new Date(dateString).toLocaleDateString(undefined, options);
+        }
+        
+        // Create a news card element
+        function createNewsCard(article) {
+            const card = document.createElement('div');
+            card.className = 'news-card';
+            
+            // HTML for the card
+            card.innerHTML = `
+                ${article.urlToImage ? 
+                    `<img src="${article.urlToImage}" alt="${article.title}" class="card-img">` : 
+                    `<div class="placeholder-img">No Image Available</div>`
+                }
+                <div class="card-content">
+                    <span class="card-source">${article.source.name || 'Unknown Source'}</span>
+                    <h3 class="card-title">${article.title || 'No Title'}</h3>
+                    <p class="card-description">${article.description || 'No description available'}</p>
+                    <div class="card-footer">
+                        <span>${article.publishedAt ? formatDate(article.publishedAt) : 'Unknown date'}</span>
+                        <a href="${article.url}" target="_blank" class="read-more">Read More</a>
+                    </div>
+                </div>
+            `;
+            
+            return card;
+        }
+        
+        // Fetch news from the API
+     // Replace your fetchNews function with this GNews version
+async function fetchNews(category = 'general', page = 1, query = '') {
+    loadingIndicator.style.display = 'block';
+    errorMessage.style.display = 'none';
+    
+    // Replace with your actual GNews API key
+    const API_KEY = '572f9be372ade4fac94da8cf8d1fe549';
+    
+    try {
+        let url;
+        if (query) {
+            url = `https://gnews.io/api/v4/search?q=${query}&lang=en&country=us&max=10&page=${page}&apikey=${API_KEY}`;
+        } else {
+            // Map NewsAPI categories to GNews categories
+            const categoryMap = {
+                general: 'general',
+                business: 'business',
+                technology: 'technology',
+                sports: 'sports',
+                entertainment: 'entertainment',
+                health: 'health',
+                science: 'science'
+            };
+            
+            const gnewsCategory = categoryMap[category] || 'general';
+            url = `https://gnews.io/api/v4/top-headlines?category=${gnewsCategory}&lang=en&country=us&max=10&page=${page}&apikey=${API_KEY}`;
+        }
+        
+        const response = await fetch(url);
+        const data = await response.json();
+        
+        if (data.errors) {
+            throw new Error(data.errors[0] || 'Failed to fetch news');
+        }
+        
+        // Transform GNews response format to match your existing code's expected format
+        return {
+            status: "ok",
+            totalResults: data.totalArticles || data.articles.length,
+            articles: data.articles.map(article => ({
+                source: { id: null, name: article.source.name },
+                author: article.source.name,
+                title: article.title,
+                description: article.description,
+                url: article.url,
+                urlToImage: article.image,
+                publishedAt: article.publishedAt,
+                content: article.content
+            }))
+        };
+    } catch (error) {
+        console.error('Error fetching news:', error);
+        errorMessage.textContent = `Error: ${error.message || 'Failed to load news. Please try again later.'}`;
+        errorMessage.style.display = 'block';
+        return null;
+    } finally {
+        loadingIndicator.style.display = 'none';
+    }
+}
+        
+        // Display news in the grid
+        function displayNews(articles, clear = false) {
+            if (clear) {
+                topHeadlinesGrid.innerHTML = '';
+                articlesLoaded = 0;
+            }
+            
+            if (!articles || articles.length === 0) {
+                const noResults = document.createElement('div');
+                noResults.className = 'error-message';
+                noResults.textContent = 'No articles found matching your criteria.';
+                topHeadlinesGrid.appendChild(noResults);
+                return;
+            }
+            
+            articles.forEach(article => {
+                const card = createNewsCard(article);
+                topHeadlinesGrid.appendChild(card);
+            });
+            
+            articlesLoaded += articles.length;
+            
+            // Show or hide load more button
+            loadMoreButton.style.display = articlesLoaded < totalResults ? 'block' : 'none';
+        }
+        
+        // Load news based on current filters
+        async function loadNews(clear = true) {
+            if (clear) {
+                currentPage = 1;
+            } else {
+                currentPage++;
+            }
+            
+            const data = await fetchNews(currentCategory, currentPage, currentQuery);
+            if (data) {
+                totalResults = data.totalResults;
+                displayNews(data.articles, clear);
+            }
+        }
+        
+        // Initial load
+        window.addEventListener('DOMContentLoaded', () => {
+            loadNews();
+        });
+        
+        // Load more button event
+        loadMoreButton.addEventListener('click', () => {
+            loadNews(false);
+        });
+        
+        // Search functionality
+        searchButton.addEventListener('click', () => {
+            currentQuery = searchInput.value.trim();
+            if (currentQuery) {
+                document.querySelector('.section-title').textContent = `Search Results for "${currentQuery}"`;
+                loadNews();
+            }
+        });
+        
+        searchInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                searchButton.click();
+            }
+        });
+        
+        // Category filter functionality
+        categoryButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Update active state
+                categoryButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                
+                // Update current category and reset search
+                currentCategory = button.dataset.category;
+                currentQuery = '';
+                searchInput.value = '';
+                document.querySelector('.section-title').textContent = 'Top Headlines';
+                
+                // Load news for the selected category
+                loadNews();
+            });
+        });
+    </script>
+</body>
+</html>
