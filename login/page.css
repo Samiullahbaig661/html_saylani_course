@@ -1,0 +1,133 @@
+div.container{
+   margin: 50% 50%;
+   transform: translate(-50% , -50%);
+    background-color: rgba(199, 107, 107, 0.633);
+    height: 700px;
+    width: 450px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center; 
+        
+    background-image: url('https://wallpaperaccess.com/full/16504.jpg'); /* Path to the image */
+    background-size: cover; /* Ensures the image covers the entire page */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    border-bottom-color: blue;
+    
+}
+div.one{
+    margin: 50% 50%;
+    transform: translate(-50% , -50%);
+    flex-direction: column;
+    height: 300px;
+    font-size: 30px;
+}
+input[type="email"],
+input[type="password"] {
+    width: 300PX; 
+    height: 40px; 
+    font-size: 25px; 
+    padding: 8px;
+    border-radius: 10px;
+    background: transparent;
+  
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin-top: 8px;
+    outline: none;
+}
+
+div.password1{
+    margin-top: 20px;
+}
+input[type="email"]:hover,
+input[type="password"]:hover{ 
+    border-block-color: rgb(160, 3, 222);
+    box-shadow: 3px 5px 15px rgb(218, 210, 6);
+}
+button.login-button,button.Sign-up {
+    width: auto; 
+    height: auto;
+    background-color: aqua;
+    opacity: 1; 
+    font-size: larger;
+    border-radius: 10px;
+    border: none; 
+    cursor: pointer;
+        margin-top: 50px; 
+        background: transparent;
+    }
+label[for="np"] ,label[for="nm"] ,button.login-button ,button.Sign-up{
+    position: relative; 
+    display: inline-block;
+}
+
+label[for="np"]:hover ,
+label[for="nm"]:hover ,
+button.login-button:hover,
+button.Sign-up:hover
+{
+    font-weight: bold;
+    color: rgb(124, 255, 94);
+}
+label[for="np"]::after,
+label[for="nm"]::after,
+button.login-button::after,
+button.Sign-up::after
+ {
+    content: ""; 
+    position: absolute;
+    left: 0;
+    bottom: -5px; 
+    width: 0;
+    height: 5px; 
+    background-color: rgb(23, 205, 255); 
+    transition: width 0.3s ease-in-out; 
+   } 
+label[for="np"]:hover::after,
+button.login-button:hover::after,
+button.Sign-up:hover::after,
+label[for="nm"]:hover::after {
+    width: 65%; 
+}
+button.Sign-up{
+    margin-left: 90px;
+    font-size: 25px;
+    font-weight: bolder;
+}
+.head {
+
+    height: auto;
+    width: 100px;
+    display: inline-block; 
+    position: relative; 
+    font-size: 60px;
+    color: rgb(32, 23, 10);
+    display: flex;
+    flex-direction: column;
+}
+.head:hover {
+    font-weight: bold;
+    color: rgb(0, 0, 0);}
+
+.head::after {
+    content: ""; 
+    position: absolute;
+    left: 0;
+    bottom: -5px; 
+    width: 0;
+    height: 5px;
+    background-color: rgb(23, 205, 255);
+    transition: width 0.3s ease-in-out; 
+}
+.head:hover::after {
+    width: 100%; 
+}
+
+
+
+
+/* form html's css */
+
+
