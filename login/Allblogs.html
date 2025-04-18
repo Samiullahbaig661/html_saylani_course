@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Blog Platform</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="Allblogs.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <a href="#" class="logo"><i class="fas fa-blog"></i> BlogZone</a>
+            <div class="nav-links">
+                <a href="#">Home</a>
+                <a href="#">Categories</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+                <a href="#" class="signup-btn" id="login-btn">Sign In</a>
+            </div>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Discover Amazing Blogs</h1>
+            <p>Find the latest articles on topics that interest you</p>
+            <div class="search-bar">
+                <input type="text" placeholder="Search for articles...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Posts -->
+    <section class="featured-section">
+        <div class="section-title">
+            <h2>Featured Posts</h2>
+        </div>
+        <div class="featured-grid">
+            <div class="featured-main">
+                <img src="/api/placeholder/800/600" alt="Featured post">
+                <div class="featured-content">
+                    <span class="blog-category">Technology</span>
+                    <h3 class="featured-title">The Future of Artificial Intelligence: What to Expect in 2025</h3>
+                    <div class="blog-meta">
+                        <div class="author">
+                            <img src="/api/placeholder/50/50" alt="Author">
+                            <span>John Doe</span>
+                        </div>
+                        <div class="blog-date">
+                            <i class="far fa-calendar"></i>
+                            <span>April 15, 2025</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="featured-side">
+                <img src="/api/placeholder/400/400" alt="Featured side">
+                <div class="featured-side-content">
+                    <span class="blog-category">Lifestyle</span>
+                    <h3 class="blog-title">10 Habits That Will Change Your Life Forever</h3>
+                    <p class="blog-excerpt">Discover the daily habits that can transform your productivity and overall well-being.</p>
+                    <div class="blog-date">
+                        <i class="far fa-calendar"></i>
+                        <span>April 12, 2025</span>
+                    </div>
+                </div>
+            </div>
+            <div class="featured-side">
+                <img src="/api/placeholder/400/400" alt="Featured side">
+                <div class="featured-side-content">
+                    <span class="blog-category">Travel</span>
+                    <h3 class="blog-title">Hidden Gems: Unexplored Destinations for 2025</h3>
+                    <p class="blog-excerpt">Plan your next vacation to these beautiful yet underrated destinations around the world.</p>
+                    <div class="blog-date">
+                        <i class="far fa-calendar"></i>
+                        <span>April 10, 2025</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blog-section">
+        <div class="section-title">
+            <h2>Latest Blogs</h2>
+        </div>
+        <div class="filter-tabs">
+            <button class="filter-btn active">All</button>
+            <button class="filter-btn">Technology</button>
+            <button class="filter-btn">Lifestyle</button>
+            <button class="filter-btn">Travel</button>
+            <button class="filter-btn">Food</button>
+            <button class="filter-btn">Business</button>
+        </div>
+        <div class="blogs-grid" id="blogs-gridd"> 
+            
+        </div>  
+        <script type="module" src="login.js"></script>
+   </body>
+   </html>
